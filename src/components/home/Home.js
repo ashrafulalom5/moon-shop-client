@@ -9,7 +9,7 @@ const Home = () => {
     useEffect(() => {
                 
         async function allBooks() {
-            const response = await fetch('http://localhost:8000/books')
+            const response = await fetch('https://nameless-sierra-22013.herokuapp.com/books')
             const data = await response.json()
             setBooks(data);
         }

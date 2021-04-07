@@ -8,7 +8,7 @@ const AllBooksAdmin = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/books")
+    fetch("https://nameless-sierra-22013.herokuapp.com/books")
       .then((res) => res.json())
       .then((data) => setBooks(data));
   }, []);
@@ -19,7 +19,7 @@ const AllBooksAdmin = () => {
 
   const handleDeleteBook = (id, event) => {
     // console.log('clicked, ', event.target.parentElement.parentElement);
-    fetch(`http://localhost:8000/delete-book/${id}`, {
+    fetch(`https://nameless-sierra-22013.herokuapp.com/delete-book/${id}`, {
         method: "DELETE"
     })
     .then(res => res.json())

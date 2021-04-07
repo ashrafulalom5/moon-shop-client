@@ -12,7 +12,7 @@ const Checkout = () => {
     const auth = useAuth();
     
     useEffect(() => {
-        const url = `http://localhost:8000/book/${bookId}`;
+        const url = `https://nameless-sierra-22013.herokuapp.com/book/${bookId}`;
     
         // fetch(url)
         // .then(res => res.json())
@@ -35,7 +35,7 @@ const Checkout = () => {
         
         console.log('from orders ', orders);
         
-        fetch('http://localhost:8000/orders',{
+        fetch('https://nameless-sierra-22013.herokuapp.com/orders',{
             method: 'POST',
             headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify({
